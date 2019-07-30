@@ -612,3 +612,1703 @@ Processing by SongsController#show as HTML
   [1m[35mArtist Load (0.2ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 1]]
   Rendered songs/show.html.erb within layouts/application (14.2ms)
 Completed 200 OK in 46ms (Views: 21.2ms | ActiveRecord: 0.6ms)
+Started GET "/songs/" for ::1 at 2019-07-29 18:26:15 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/artists
+Completed 302 Found in 8ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/artists" for ::1 at 2019-07-29 18:26:15 -0400
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.1ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 332ms (Views: 326.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/artists/1" for ::1 at 2019-07-29 18:26:22 -0400
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArtist Load (0.5ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering artists/show.html.erb within layouts/application
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."artist_id" = ?[0m  [["artist_id", 1]]
+  Rendered artists/show.html.erb within layouts/application (35.1ms)
+Completed 200 OK in 50ms (Views: 41.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/artists/2" for ::1 at 2019-07-29 18:26:26 -0400
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering artists/show.html.erb within layouts/application
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."artist_id" = ?[0m  [["artist_id", 2]]
+  Rendered artists/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 11ms (Views: 8.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/artists/4" for ::1 at 2019-07-29 18:26:28 -0400
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArtist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering artists/show.html.erb within layouts/application
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."artist_id" = ?[0m  [["artist_id", 4]]
+  Rendered artists/show.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 13ms (Views: 11.4ms | ActiveRecord: 0.2ms)
+
+
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mArtist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."name" = ? LIMIT ?[0m  [["name", "The Killers"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "songs" ("title", "created_at", "updated_at", "artist_id") VALUES (?, ?, ?, ?)[0m  [["title", "Mr. Brightside"], ["created_at", "2019-07-29 22:27:29.531644"], ["updated_at", "2019-07-29 22:27:29.531644"], ["artist_id", 1]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mArtist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."name" = ? LIMIT ?[0m  [["name", "The Killers"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "songs" ("title", "created_at", "updated_at", "artist_id") VALUES (?, ?, ?, ?)[0m  [["title", "Jenny Was a Friend of Mine"], ["created_at", "2019-07-29 22:27:29.535001"], ["updated_at", "2019-07-29 22:27:29.535001"], ["artist_id", 1]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mArtist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."name" = ? LIMIT ?[0m  [["name", "Tommy Tutone"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "songs" ("title", "created_at", "updated_at", "artist_id") VALUES (?, ?, ?, ?)[0m  [["title", "Jenny"], ["created_at", "2019-07-29 22:27:29.538488"], ["updated_at", "2019-07-29 22:27:29.538488"], ["artist_id", 2]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mArtist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."name" = ? LIMIT ?[0m  [["name", "Daft Punk"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "songs" ("title", "created_at", "updated_at", "artist_id") VALUES (?, ?, ?, ?)[0m  [["title", "Around the World"], ["created_at", "2019-07-29 22:27:29.541142"], ["updated_at", "2019-07-29 22:27:29.541142"], ["artist_id", 3]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mArtist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."name" = ? LIMIT ?[0m  [["name", "Daft Punk"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "songs" ("title", "created_at", "updated_at", "artist_id") VALUES (?, ?, ?, ?)[0m  [["title", "Harder, Better, Faster, Stronger"], ["created_at", "2019-07-29 22:27:29.544350"], ["updated_at", "2019-07-29 22:27:29.544350"], ["artist_id", 3]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mArtist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."name" = ? LIMIT ?[0m  [["name", "Pixies"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "songs" ("title", "created_at", "updated_at", "artist_id") VALUES (?, ?, ?, ?)[0m  [["title", "Where is My Mind?"], ["created_at", "2019-07-29 22:27:29.546939"], ["updated_at", "2019-07-29 22:27:29.546939"], ["artist_id", 4]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mArtist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."name" = ? LIMIT ?[0m  [["name", "Pixies"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "songs" ("title", "created_at", "updated_at", "artist_id") VALUES (?, ?, ?, ?)[0m  [["title", "Gigantic"], ["created_at", "2019-07-29 22:27:29.549669"], ["updated_at", "2019-07-29 22:27:29.549669"], ["artist_id", 4]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."name" = ? LIMIT ?[0m  [["name", "Pixies"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "songs" ("title", "created_at", "updated_at", "artist_id") VALUES (?, ?, ?, ?)[0m  [["title", "Monkey Gone to Heaven"], ["created_at", "2019-07-29 22:27:29.553182"], ["updated_at", "2019-07-29 22:27:29.553182"], ["artist_id", 4]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/posts/" for ::1 at 2019-07-29 18:32:39 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/posts"):
+  
+actionpack (5.0.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7.1) lib/rails/engine.rb:522:in `call'
+rack (2.0.6) lib/rack/handler/webrick.rb:86:in `service'
+/Users/jennifer/.rvm/rubies/ruby-2.6.1/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+/Users/jennifer/.rvm/rubies/ruby-2.6.1/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+/Users/jennifer/.rvm/rubies/ruby-2.6.1/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+  Rendering /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered collection of /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [11 times] (5.7ms)
+  Rendered /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (10.2ms)
+  Rendering /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (39.0ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from acceptable_content_type? at /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/middleware.rb:58)
+  Rendering /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendering /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendering /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendering /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from ___sers_jennifer__rvm_gems_ruby_______gems_web_console_______lib_web_console_templates_console_js_erb__304722080633303376_70236599266780 at /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb:491)
+  Rendered /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (23.8ms)
+  Rendering /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendering /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (42.5ms)
+Started GET "/songs/" for ::1 at 2019-07-29 18:32:44 -0400
+Processing by SongsController#index as HTML
+  [1m[36mSong Load (0.6ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+Completed 500 Internal Server Error in 71ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `artists_path' for #<SongsController:0x00007fc277233250>
+Did you mean?  artist_path):
+  
+app/controllers/songs_controller.rb:8:in `index'
+  Rendering /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.9ms)
+  Rendering /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendering /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (34.5ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from acceptable_content_type? at /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/middleware.rb:58)
+  Rendering /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (16.2ms)
+  Rendering /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendering /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendering /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from ___sers_jennifer__rvm_gems_ruby_______gems_web_console_______lib_web_console_templates_console_js_erb__304722080633303376_70236607107760 at /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb:491)
+  Rendered /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (14.9ms)
+  Rendering /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendering /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (53.3ms)
+Started GET "/songs/" for ::1 at 2019-07-29 18:34:21 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 8ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:21 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:21 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:21 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:21 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:21 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:22 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:22 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:22 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:22 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:22 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:22 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:22 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:22 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:22 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:22 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:22 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:22 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:22 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:22 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:22 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:22 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:22 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:22 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:22 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:22 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:22 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:22 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:22 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:22 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:22 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:22 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:22 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:22 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:22 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:22 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:22 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:22 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:22 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:22 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:24 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:24 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:24 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:24 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:24 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:24 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:24 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:24 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:24 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:24 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:24 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:24 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:24 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:24 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:24 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:24 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:24 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:24 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:24 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:24 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:30 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:31 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:31 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:31 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:31 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:31 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:31 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:31 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:31 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:31 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:31 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:31 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:31 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:31 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:31 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:31 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:31 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:31 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:31 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:31 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:31 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:31 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:31 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:31 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:31 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:31 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:32 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:32 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:32 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:32 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:32 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:32 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:32 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:32 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:32 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:32 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:32 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:32 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:32 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:32 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:32 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:37 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:37 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:37 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:37 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:37 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:37 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:37 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:37 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:37 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:37 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:37 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:37 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:37 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:37 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:37 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:37 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:37 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:37 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:37 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:37 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:34:44 -0400
+Processing by SongsController#index as HTML
+Redirected to http://localhost:3000/songs.%23%3CSong::ActiveRecord_Relation:0x00007fc2781fd640%3E
+Completed 302 Found in 7ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs.%23%3CSong::ActiveRecord_Relation:0x00007fc2781fd640%3E" for ::1 at 2019-07-29 18:34:44 -0400
+Processing by SongsController#index as 
+Redirected to http://localhost:3000/songs.%23%3CSong::ActiveRecord_Relation:0x00007fc276b09f10%3E
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs.%23%3CSong::ActiveRecord_Relation:0x00007fc276b09f10%3E" for ::1 at 2019-07-29 18:34:44 -0400
+Processing by SongsController#index as 
+Redirected to http://localhost:3000/songs.%23%3CSong::ActiveRecord_Relation:0x00007fc27751ab58%3E
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs.%23%3CSong::ActiveRecord_Relation:0x00007fc27751ab58%3E" for ::1 at 2019-07-29 18:34:44 -0400
+Processing by SongsController#index as 
+Redirected to http://localhost:3000/songs.%23%3CSong::ActiveRecord_Relation:0x00007fc272ff3700%3E
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs.%23%3CSong::ActiveRecord_Relation:0x00007fc272ff3700%3E" for ::1 at 2019-07-29 18:34:44 -0400
+Processing by SongsController#index as 
+Redirected to http://localhost:3000/songs.%23%3CSong::ActiveRecord_Relation:0x00007fc278820388%3E
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs.%23%3CSong::ActiveRecord_Relation:0x00007fc278820388%3E" for ::1 at 2019-07-29 18:34:44 -0400
+Processing by SongsController#index as 
+Redirected to http://localhost:3000/songs.%23%3CSong::ActiveRecord_Relation:0x00007fc27824c1c8%3E
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs.%23%3CSong::ActiveRecord_Relation:0x00007fc27824c1c8%3E" for ::1 at 2019-07-29 18:34:44 -0400
+Processing by SongsController#index as 
+Redirected to http://localhost:3000/songs.%23%3CSong::ActiveRecord_Relation:0x00007fc278070de0%3E
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs.%23%3CSong::ActiveRecord_Relation:0x00007fc278070de0%3E" for ::1 at 2019-07-29 18:34:44 -0400
+Processing by SongsController#index as 
+Redirected to http://localhost:3000/songs.%23%3CSong::ActiveRecord_Relation:0x00007fc2771bd9d8%3E
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs.%23%3CSong::ActiveRecord_Relation:0x00007fc2771bd9d8%3E" for ::1 at 2019-07-29 18:34:44 -0400
+Processing by SongsController#index as 
+Redirected to http://localhost:3000/songs.%23%3CSong::ActiveRecord_Relation:0x00007fc278122630%3E
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs.%23%3CSong::ActiveRecord_Relation:0x00007fc278122630%3E" for ::1 at 2019-07-29 18:34:44 -0400
+Processing by SongsController#index as 
+Redirected to http://localhost:3000/songs.%23%3CSong::ActiveRecord_Relation:0x00007fc276b4f240%3E
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs.%23%3CSong::ActiveRecord_Relation:0x00007fc276b4f240%3E" for ::1 at 2019-07-29 18:34:44 -0400
+Processing by SongsController#index as 
+Redirected to http://localhost:3000/songs.%23%3CSong::ActiveRecord_Relation:0x00007fc277267e38%3E
+Completed 302 Found in 27ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs.%23%3CSong::ActiveRecord_Relation:0x00007fc277267e38%3E" for ::1 at 2019-07-29 18:34:45 -0400
+Processing by SongsController#index as 
+Redirected to http://localhost:3000/songs.%23%3CSong::ActiveRecord_Relation:0x00007fc272b18050%3E
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs.%23%3CSong::ActiveRecord_Relation:0x00007fc272b18050%3E" for ::1 at 2019-07-29 18:34:45 -0400
+Processing by SongsController#index as 
+Redirected to http://localhost:3000/songs.%23%3CSong::ActiveRecord_Relation:0x00007fc272561f08%3E
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs.%23%3CSong::ActiveRecord_Relation:0x00007fc272561f08%3E" for ::1 at 2019-07-29 18:34:45 -0400
+Processing by SongsController#index as 
+Redirected to http://localhost:3000/songs.%23%3CSong::ActiveRecord_Relation:0x00007fc271ddb860%3E
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs.%23%3CSong::ActiveRecord_Relation:0x00007fc271ddb860%3E" for ::1 at 2019-07-29 18:34:45 -0400
+Processing by SongsController#index as 
+Redirected to http://localhost:3000/songs.%23%3CSong::ActiveRecord_Relation:0x00007fc27266c4e8%3E
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs.%23%3CSong::ActiveRecord_Relation:0x00007fc27266c4e8%3E" for ::1 at 2019-07-29 18:34:45 -0400
+Processing by SongsController#index as 
+Redirected to http://localhost:3000/songs.%23%3CSong::ActiveRecord_Relation:0x00007fc272c6c7f8%3E
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs.%23%3CSong::ActiveRecord_Relation:0x00007fc272c6c7f8%3E" for ::1 at 2019-07-29 18:34:45 -0400
+Processing by SongsController#index as 
+Redirected to http://localhost:3000/songs.%23%3CSong::ActiveRecord_Relation:0x00007fc272ccc9a0%3E
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs.%23%3CSong::ActiveRecord_Relation:0x00007fc272ccc9a0%3E" for ::1 at 2019-07-29 18:34:45 -0400
+Processing by SongsController#index as 
+Redirected to http://localhost:3000/songs.%23%3CSong::ActiveRecord_Relation:0x00007fc273412908%3E
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs.%23%3CSong::ActiveRecord_Relation:0x00007fc273412908%3E" for ::1 at 2019-07-29 18:34:45 -0400
+Processing by SongsController#index as 
+Redirected to http://localhost:3000/songs.%23%3CSong::ActiveRecord_Relation:0x00007fc271dea798%3E
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs.%23%3CSong::ActiveRecord_Relation:0x00007fc271dea798%3E" for ::1 at 2019-07-29 18:34:45 -0400
+Processing by SongsController#index as 
+Redirected to http://localhost:3000/songs.%23%3CSong::ActiveRecord_Relation:0x00007fc2734a34f8%3E
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs.%23%3CSong::ActiveRecord_Relation:0x00007fc271dea798%3E" for ::1 at 2019-07-29 18:34:46 -0400
+Processing by SongsController#index as 
+Redirected to http://localhost:3000/songs.%23%3CSong::ActiveRecord_Relation:0x00007fc27350a928%3E
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs.%23%3CSong::ActiveRecord_Relation:0x00007fc27350a928%3E" for ::1 at 2019-07-29 18:34:46 -0400
+Processing by SongsController#index as 
+Redirected to http://localhost:3000/songs.%23%3CSong::ActiveRecord_Relation:0x00007fc273570520%3E
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs.%23%3CSong::ActiveRecord_Relation:0x00007fc273570520%3E" for ::1 at 2019-07-29 18:34:46 -0400
+Processing by SongsController#index as 
+Redirected to http://localhost:3000/songs.%23%3CSong::ActiveRecord_Relation:0x00007fc2735dbde8%3E
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs.%23%3CSong::ActiveRecord_Relation:0x00007fc2735dbde8%3E" for ::1 at 2019-07-29 18:34:46 -0400
+Processing by SongsController#index as 
+Redirected to http://localhost:3000/songs.%23%3CSong::ActiveRecord_Relation:0x00007fc2726bf120%3E
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs.%23%3CSong::ActiveRecord_Relation:0x00007fc2726bf120%3E" for ::1 at 2019-07-29 18:34:46 -0400
+Processing by SongsController#index as 
+Redirected to http://localhost:3000/songs.%23%3CSong::ActiveRecord_Relation:0x00007fc27271d0b8%3E
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs.%23%3CSong::ActiveRecord_Relation:0x00007fc27271d0b8%3E" for ::1 at 2019-07-29 18:34:46 -0400
+Processing by SongsController#index as 
+Redirected to http://localhost:3000/songs.%23%3CSong::ActiveRecord_Relation:0x00007fc27277d8f0%3E
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs.%23%3CSong::ActiveRecord_Relation:0x00007fc27277d8f0%3E" for ::1 at 2019-07-29 18:34:46 -0400
+Processing by SongsController#index as 
+Redirected to http://localhost:3000/songs.%23%3CSong::ActiveRecord_Relation:0x00007fc2727de3a8%3E
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs.%23%3CSong::ActiveRecord_Relation:0x00007fc2727de3a8%3E" for ::1 at 2019-07-29 18:34:46 -0400
+Processing by SongsController#index as 
+Redirected to http://localhost:3000/songs.%23%3CSong::ActiveRecord_Relation:0x00007fc276849348%3E
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs.%23%3CSong::ActiveRecord_Relation:0x00007fc276849348%3E" for ::1 at 2019-07-29 18:34:46 -0400
+Processing by SongsController#index as 
+Redirected to http://localhost:3000/songs.%23%3CSong::ActiveRecord_Relation:0x00007fc273609f68%3E
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs.%23%3CSong::ActiveRecord_Relation:0x00007fc273609f68%3E" for ::1 at 2019-07-29 18:34:46 -0400
+Processing by SongsController#index as 
+Redirected to http://localhost:3000/songs.%23%3CSong::ActiveRecord_Relation:0x00007fc273669378%3E
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs.%23%3CSong::ActiveRecord_Relation:0x00007fc273669378%3E" for ::1 at 2019-07-29 18:34:46 -0400
+Processing by SongsController#index as 
+Redirected to http://localhost:3000/songs.%23%3CSong::ActiveRecord_Relation:0x00007fc276891468%3E
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs.%23%3CSong::ActiveRecord_Relation:0x00007fc276891468%3E" for ::1 at 2019-07-29 18:34:46 -0400
+Processing by SongsController#index as 
+Redirected to http://localhost:3000/songs.%23%3CSong::ActiveRecord_Relation:0x00007fc2736e9d70%3E
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs.%23%3CSong::ActiveRecord_Relation:0x00007fc2736e9d70%3E" for ::1 at 2019-07-29 18:34:46 -0400
+Processing by SongsController#index as 
+Redirected to http://localhost:3000/songs.%23%3CSong::ActiveRecord_Relation:0x00007fc2737509d0%3E
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs.%23%3CSong::ActiveRecord_Relation:0x00007fc2737509d0%3E" for ::1 at 2019-07-29 18:34:46 -0400
+Processing by SongsController#index as 
+Redirected to http://localhost:3000/songs.%23%3CSong::ActiveRecord_Relation:0x00007fc2737b1898%3E
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs.%23%3CSong::ActiveRecord_Relation:0x00007fc2737b1898%3E" for ::1 at 2019-07-29 18:34:46 -0400
+Processing by SongsController#index as 
+Redirected to http://localhost:3000/songs.%23%3CSong::ActiveRecord_Relation:0x00007fc277010f18%3E
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs.%23%3CSong::ActiveRecord_Relation:0x00007fc277010f18%3E" for ::1 at 2019-07-29 18:34:46 -0400
+Processing by SongsController#index as 
+Redirected to http://localhost:3000/songs.%23%3CSong::ActiveRecord_Relation:0x00007fc2770719d0%3E
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs.%23%3CSong::ActiveRecord_Relation:0x00007fc2770719d0%3E" for ::1 at 2019-07-29 18:34:46 -0400
+Processing by SongsController#index as 
+Redirected to http://localhost:3000/songs.%23%3CSong::ActiveRecord_Relation:0x00007fc271e9b520%3E
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs.%23%3CSong::ActiveRecord_Relation:0x00007fc271e9b520%3E" for ::1 at 2019-07-29 18:34:46 -0400
+Processing by SongsController#index as 
+Redirected to http://localhost:3000/songs.%23%3CSong::ActiveRecord_Relation:0x00007fc2768d0230%3E
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs.%23%3CSong::ActiveRecord_Relation:0x00007fc2768d0230%3E" for ::1 at 2019-07-29 18:34:46 -0400
+Processing by SongsController#index as 
+Redirected to http://localhost:3000/songs.%23%3CSong::ActiveRecord_Relation:0x00007fc2770a0d70%3E
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs.%23%3CSong::ActiveRecord_Relation:0x00007fc2770a0d70%3E" for ::1 at 2019-07-29 18:34:46 -0400
+Processing by SongsController#index as 
+Redirected to http://localhost:3000/songs.%23%3CSong::ActiveRecord_Relation:0x00007fc277101800%3E
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/songs.%23%3CSong::ActiveRecord_Relation:0x00007fc2770a0d70%3E" for ::1 at 2019-07-29 18:34:59 -0400
+Processing by SongsController#index as 
+  Rendering songs/index.html.erb within layouts/application
+  [1m[36mSong Load (2.1ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mArtist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mArtist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered songs/index.html.erb within layouts/application (65.3ms)
+Completed 200 OK in 83ms (Views: 71.7ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/songs.%23%3CSong::ActiveRecord_Relation:0x00007fc2770a0d70%3E" for ::1 at 2019-07-29 18:35:17 -0400
+Processing by SongsController#index as 
+  Rendering songs/index.html.erb within layouts/application
+  [1m[36mSong Load (0.8ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  [1m[36mArtist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mArtist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArtist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mArtist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered songs/index.html.erb within layouts/application (37.7ms)
+Completed 200 OK in 54ms (Views: 44.6ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/songs.%23%3CSong::ActiveRecord_Relation:0x00007fc2770a0d70%3E" for ::1 at 2019-07-29 18:35:20 -0400
+Processing by SongsController#index as 
+  Rendering songs/index.html.erb within layouts/application
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  [1m[36mArtist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mArtist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArtist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mArtist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered songs/index.html.erb within layouts/application (35.8ms)
+Completed 200 OK in 48ms (Views: 43.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/artists/1" for ::1 at 2019-07-29 18:35:21 -0400
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering artists/show.html.erb within layouts/application
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."artist_id" = ?[0m  [["artist_id", 1]]
+  Rendered artists/show.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 16ms (Views: 12.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/songs/1" for ::1 at 2019-07-29 18:35:24 -0400
+Processing by SongsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering songs/show.html.erb within layouts/application
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered songs/show.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 16ms (Views: 12.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/artists/1" for ::1 at 2019-07-29 18:39:29 -0400
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArtist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering artists/show.html.erb within layouts/application
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."artist_id" = ?[0m  [["artist_id", 1]]
+  Rendered artists/show.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 19ms (Views: 15.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/songs/1" for ::1 at 2019-07-29 18:39:33 -0400
+Processing by SongsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering songs/show.html.erb within layouts/application
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered songs/show.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 21ms (Views: 14.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/songs.%23%3CSong::ActiveRecord_Relation:0x00007fc2770a0d70%3E" for ::1 at 2019-07-29 18:43:35 -0400
+Processing by SongsController#index as 
+  Rendering songs/index.html.erb within layouts/application
+  [1m[36mSong Load (0.6ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mArtist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArtist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mArtist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered songs/index.html.erb within layouts/application (71.5ms)
+Completed 200 OK in 97ms (Views: 85.7ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:43:56 -0400
+Processing by SongsController#index as HTML
+  Rendering songs/index.html.erb within layouts/application
+  [1m[36mSong Load (0.5ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  [1m[36mArtist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mArtist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArtist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mArtist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE (93.2ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered songs/index.html.erb within layouts/application (141.3ms)
+Completed 200 OK in 154ms (Views: 54.6ms | ActiveRecord: 95.6ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:43:59 -0400
+Processing by SongsController#index as HTML
+  Rendering songs/index.html.erb within layouts/application
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  [1m[36mArtist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mArtist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered songs/index.html.erb within layouts/application (45.5ms)
+Completed 200 OK in 57ms (Views: 54.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:44:23 -0400
+Processing by SongsController#index as HTML
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `byebug' for #<SongsController:0x00007fc2726ec3c8>):
+  
+app/controllers/songs_controller.rb:3:in `index'
+  Rendering /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.7ms)
+  Rendering /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendering /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (19.9ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from acceptable_content_type? at /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/middleware.rb:58)
+  Rendering /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendering /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendering /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendering /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from ___sers_jennifer__rvm_gems_ruby_______gems_web_console_______lib_web_console_templates_console_js_erb__304722080633303376_70236563627160 at /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb:491)
+  Rendered /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (17.7ms)
+  Rendering /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendering /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (33.1ms)
+Started GET "/songs" for ::1 at 2019-07-29 18:46:33 -0400
+Processing by SongsController#index as HTML
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `byebug' for #<SongsController:0x00007fc2772b11f0>):
+  
+app/controllers/songs_controller.rb:3:in `index'
+  Rendering /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.6ms)
+  Rendering /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendering /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (28.2ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from acceptable_content_type? at /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/middleware.rb:58)
+  Rendering /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendering /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendering /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendering /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from ___sers_jennifer__rvm_gems_ruby_______gems_web_console_______lib_web_console_templates_console_js_erb__304722080633303376_70236564443300 at /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb:491)
+  Rendered /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (28.6ms)
+  Rendering /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendering /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (49.8ms)
+Started GET "/songs" for ::1 at 2019-07-29 18:48:42 -0400
+Processing by SongsController#index as HTML
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `byebug' for #<SongsController:0x00007fc272f5bc98>):
+  
+app/controllers/songs_controller.rb:3:in `index'
+  Rendering /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.3ms)
+  Rendering /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendering /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (21.1ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from acceptable_content_type? at /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/middleware.rb:58)
+  Rendering /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendering /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendering /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendering /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from ___sers_jennifer__rvm_gems_ruby_______gems_web_console_______lib_web_console_templates_console_js_erb__304722080633303376_70236555415620 at /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb:491)
+  Rendered /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (15.9ms)
+  Rendering /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendering /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (31.7ms)
+Started GET "/songs" for ::1 at 2019-07-29 18:48:43 -0400
+Processing by SongsController#index as HTML
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `byebug' for #<SongsController:0x00007fc27269c5f8>):
+  
+app/controllers/songs_controller.rb:3:in `index'
+  Rendering /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.7ms)
+  Rendering /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendering /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (20.5ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from acceptable_content_type? at /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/middleware.rb:58)
+  Rendering /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendering /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendering /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendering /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from ___sers_jennifer__rvm_gems_ruby_______gems_web_console_______lib_web_console_templates_console_js_erb__304722080633303376_70236599725840 at /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb:491)
+  Rendered /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (15.5ms)
+  Rendering /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendering /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (33.8ms)
+Started GET "/songs" for ::1 at 2019-07-29 18:48:50 -0400
+Processing by SongsController#index as HTML
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `byebug' for #<SongsController:0x00007fc277298290>):
+  
+app/controllers/songs_controller.rb:3:in `index'
+  Rendering /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.5ms)
+  Rendering /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendering /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (20.7ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from acceptable_content_type? at /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/middleware.rb:58)
+  Rendering /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendering /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendering /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendering /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from ___sers_jennifer__rvm_gems_ruby_______gems_web_console_______lib_web_console_templates_console_js_erb__304722080633303376_70236607504400 at /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb:491)
+  Rendered /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (14.8ms)
+  Rendering /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendering /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (30.0ms)
+Started GET "/songs" for ::1 at 2019-07-29 18:54:47 -0400
+Processing by SongsController#index as HTML
+  Rendering songs/index.html.erb within layouts/application
+  [1m[36mSong Load (0.6ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArtist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mArtist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered songs/index.html.erb within layouts/application (46.8ms)
+Completed 200 OK in 61ms (Views: 52.4ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/artists/1" for ::1 at 2019-07-29 18:54:49 -0400
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArtist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering artists/show.html.erb within layouts/application
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."artist_id" = ?[0m  [["artist_id", 1]]
+  Rendered artists/show.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 17ms (Views: 14.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/songs/1" for ::1 at 2019-07-29 18:54:52 -0400
+Processing by SongsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering songs/show.html.erb within layouts/application
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered songs/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 16ms (Views: 14.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/artists/1" for ::1 at 2019-07-29 18:54:54 -0400
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArtist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering artists/show.html.erb within layouts/application
+  [1m[36mSong Load (0.8ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."artist_id" = ?[0m  [["artist_id", 1]]
+  Rendered artists/show.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 105ms (Views: 102.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/songs" for ::1 at 2019-07-29 18:54:56 -0400
+Processing by SongsController#index as HTML
+  Rendering songs/index.html.erb within layouts/application
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArtist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mArtist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered songs/index.html.erb within layouts/application (46.5ms)
+Completed 200 OK in 52ms (Views: 49.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/artists/1" for ::1 at 2019-07-29 18:54:59 -0400
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArtist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering artists/show.html.erb within layouts/application
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."artist_id" = ?[0m  [["artist_id", 1]]
+  Rendered artists/show.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 13ms (Views: 11.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/songs/1" for ::1 at 2019-07-30 10:27:30 -0400
+Processing by SongsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSong Load (1.2ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering songs/show.html.erb within layouts/application
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered songs/show.html.erb within layouts/application (18.9ms)
+Completed 200 OK in 73ms (Views: 54.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/artists/1" for ::1 at 2019-07-30 10:27:32 -0400
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering artists/show.html.erb within layouts/application
+  [1m[36mSong Load (1.0ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."artist_id" = ?[0m  [["artist_id", 1]]
+  Rendered artists/show.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 26ms (Views: 20.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/artists/1" for ::1 at 2019-07-30 10:30:05 -0400
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArtist Load (1.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering artists/show.html.erb within layouts/application
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."artist_id" = ?[0m  [["artist_id", 1]]
+  Rendered artists/show.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 16ms (Views: 12.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/artists/1/songs/1" for ::1 at 2019-07-30 10:30:08 -0400
+Processing by SongsController#show as HTML
+  Parameters: {"artist_id"=>"1", "id"=>"1"}
+  [1m[36mSong Load (0.4ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering songs/show.html.erb within layouts/application
+  [1m[36mArtist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered songs/show.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 24ms (Views: 18.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/artists/1" for ::1 at 2019-07-30 10:30:09 -0400
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering artists/show.html.erb within layouts/application
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."artist_id" = ?[0m  [["artist_id", 1]]
+  Rendered artists/show.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 18ms (Views: 14.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/artists/1/songs/9" for ::1 at 2019-07-30 10:30:11 -0400
+Processing by SongsController#show as HTML
+  Parameters: {"artist_id"=>"1", "id"=>"9"}
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering songs/show.html.erb within layouts/application
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered songs/show.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 15ms (Views: 12.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/artists/1/songs/9" for ::1 at 2019-07-30 10:30:12 -0400
+Processing by SongsController#show as HTML
+  Parameters: {"artist_id"=>"1", "id"=>"9"}
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering songs/show.html.erb within layouts/application
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered songs/show.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 16ms (Views: 13.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/artists/1" for ::1 at 2019-07-30 10:30:44 -0400
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering artists/show.html.erb within layouts/application
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."artist_id" = ?[0m  [["artist_id", 1]]
+  Rendered artists/show.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 14ms (Views: 11.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/artists/1/songs/" for ::1 at 2019-07-30 10:30:52 -0400
+Processing by SongsController#index as HTML
+  Parameters: {"artist_id"=>"1"}
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering songs/index.html.erb within layouts/application
+  Rendered songs/index.html.erb within layouts/application (12.4ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <ul>
+    2: <% @songs.each do |song| %>
+    3:   <li><%= display_artist(song) %> - <%= link_to song.title, song_path(song) %></li>
+    4: <% end %>
+    5: </ul>
+  
+app/views/songs/index.html.erb:2:in `_app_views_songs_index_html_erb___4308941268722616481_70236563304980'
+  Rendering /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.6ms)
+  Rendering /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendering /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (9.1ms)
+  Rendered /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (35.9ms)
+DEPRECATION WARNING: #original_exception is deprecated. Use #cause instead. (called from block in render_exception_with_web_console at /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/extensions.rb:16)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from acceptable_content_type? at /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/middleware.rb:58)
+  Rendering /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendering /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendering /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendering /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from ___sers_jennifer__rvm_gems_ruby_______gems_web_console_______lib_web_console_templates_console_js_erb__304722080633303376_70236607722880 at /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb:491)
+  Rendered /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (25.0ms)
+  Rendering /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendering /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/jennifer/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (48.4ms)
